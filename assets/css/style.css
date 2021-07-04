@@ -69,3 +69,29 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.text-centre{
+  text-align: center;
+  padding :0px;
+  padding-left: 0px;
+}
+
+.border {
+  border-width:2px !important;
+}
+
+#btn{
+  /* font-size: 2.5rem; */
+  font-weight: bolder;       
+  /* height:50px; */
+  /* border-radius: 200px; */
+  /* border : 2px solid var(--light-primary-color);     */
+  cursor: pointer;   
+  /* color: var(--secondary-text-color);  */
+  /* background-color: var(--divider-color); */
+}
+
+#btn:hover {
+  /* border: 3px solid var(--dark-primary-color); */
+  color : red
+}
