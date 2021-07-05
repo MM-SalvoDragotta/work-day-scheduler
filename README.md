@@ -3,7 +3,7 @@
 ## Day planner
 A simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery. Boottrap and [Moment.js](https://momentjs.com/) are also used.
 
-You can view the deployed Code Quiz App at this link. [Work Day Scheduler](https://mm-salvodragotta.github.io/work-day-scheduler/).
+You can view the deployed Work Day Scheduler at this link. [Work Day Scheduler](https://mm-salvodragotta.github.io/work-day-scheduler/).
 
 ## Mock-Up
 
