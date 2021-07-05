@@ -81,7 +81,7 @@ textarea {
   border-width:2px !important;
 }
 
-#btn{
+.btn{
   /* font-size: 2.5rem; */
   font-weight: bolder;       
   /* height:50px; */
@@ -92,7 +92,7 @@ textarea {
   /* background-color: var(--divider-color); */
 }
 
-#btn:hover {
+.btn:hover {
   /* border: 3px solid var(--dark-primary-color); */
   color : red
 }

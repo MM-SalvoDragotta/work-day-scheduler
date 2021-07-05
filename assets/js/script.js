@@ -25,12 +25,25 @@ function generateHour (length , start){
         .append(`
         <div class='row h-75 '> 
             <div id="${i+start}" class="ppf col-sm-2 border border-dark rounded text-center">${hourArray[i]} </div>
-            <input id="${i+start}" data-name="${"localStorage"}${i+start}" class="ppf col-sm-8 border border-dark form-control form-control-lg" type="text" placeholder=".form-control-lg">
-            <div id="${i+start}" class="ppf col-sm-2 border border-dark rounded text-center"> <span id="btn"> Save </span> </div>
+            <input id="${i+start}" data-hour="${hourArray[i].replace(/\s/g, '')}" class="ppf col-sm-8 border border-dark form-control form-control-lg" type="text" placeholder=".form-control-lg">
+            <div id="${i+start}" class="ppf col-sm-2 border border-dark rounded text-center"> <span class="btn"> Save </span> </div>
         </div>`);
     }      
 }
  
+// function generateHour (length , start){
+//     for (var i=0 ; i<length ; i++){
+//         $(".container")
+//         .append(`
+//         <div class='row h-75 '> 
+//             <div id="${i+start}" class="ppf col-sm-2 border border-dark rounded text-center">${hourArray[i]} </div>
+//             <input id="${i+start}" data-name="${"localStorage"}${i+start}" class="ppf col-sm-8 border border-dark form-control form-control-lg" type="text" placeholder=".form-control-lg">
+//             <div id="${i+start}" class="ppf col-sm-2 border border-dark rounded text-center"> <span class="btn"> Save </span> </div>
+//         </div>`);
+//     }      
+// }
+
+
 generateHour (10,8);
 
 
@@ -41,20 +54,35 @@ $.each(selectAllHours, function (i, ppf) {
     var getId = parseInt($(this).attr("id"));
     // console.log(getId)
     if (getId === currentHour) {
-      $(this).next().addClass("present");
+      $(this).addClass("present");
     //   console.log(getId)
     } else if (getId < currentHour) {
-      $(this).next().addClass("past");
+      $(this).addClass("past");
     //   console.log(getId)
     } else if (getId > currentHour) {
-      $(this).next().addClass("future");
+      $(this).addClass("future");
     //   console.log(getId)
     }
-  });    
+  });
+  
+function storeScores(input) {
+// Stringify and set key in localStorage to theScores array
+localStorage.setItem("theScores", JSON.stringify(theScores));
+}
        
+$(".btn").click(function(event){
+    // console.log(event.target.parentElement.previousElementSibling);
+    // console.log(event.target.parentElement.previousElementSibling.id)
+    // console.log(event.target.parentElement.previousElementSibling.getAttribute("data-hour"))
+    // console.log(event.target.parentElement.previousElementSibling.value);    
+    // console.log(event.target.parentElement)
+    // console.log(event.target.parentElement.id)
+    var storageName = event.target.parentElement.previousElementSibling.getAttribute("data-hour");
+    var storageValue = event.target.parentElement.previousElementSibling.value
+    localStorage.setItem(storageName, JSON.stringify(storageValue));
+});   
      
-     
-       
+
   
 
      
