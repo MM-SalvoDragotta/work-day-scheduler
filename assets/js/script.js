@@ -24,7 +24,7 @@ function generateHour (length , start){
         $(".container")
         .append(`
         <div class='row h-75 '> 
-            <div id="${i+start}" class="ppf col-sm-2 border border-dark rounded text-center">${hourArray[i]} </div>
+            <div id="${i+start}" class="ppf col-sm-2 border border-dark rounded center text-center">${hourArray[i]} </div>
             <input id="${i+start}" data-hour="${hourArray[i].replace(/\s/g, '')}" class="ppf col-sm-8 border border-dark form-control form-control-lg" type="text" placeholder="Add Task">
             <div id="${i+start}" class="ppf col-sm-2 border border-dark rounded text-center"> <span class="btn"> Save </span> </div>
         </div>`);
@@ -52,8 +52,7 @@ function renderPastPresentFuture(){
 }
 
 function renderLocalStorage(){
-    var inputUserHours = document.getElementsByTagName('input');    
-
+    var inputUserHours = document.getElementsByTagName('input');
     for (var i=0; i< hourArray.length ; i++) {
         var localStorageValue = JSON.parse(localStorage.getItem(hourArray[i].replace(/\s/g, '')));
         inputUserHours[i].value = localStorageValue 
@@ -65,9 +64,7 @@ function init() {
     renderPastPresentFuture()
     renderLocalStorage();     
 }
-
-// save event to save to localStorage 
-  
+ 
 init(); 
 
 $(".btn").click(function(event){

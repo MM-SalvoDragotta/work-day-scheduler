@@ -1,7 +1,22 @@
+/* ========================================================================
+  Variables
+ ========================================================================== */
+ :root{
+  --dark-primary-color : #303F9F; /* background */
+ --default-primary-color : #3F51B5; /* background */
+ --light-primary-color : #C5CAE9; /* background */
+ --text-primary-color : #FFFFFF; /* text */
+ --accent-color : #448AFF; /* background */
+ --primary-text-color : #212121; /* text */
+ --secondary-text-color : #757575; /* text */
+ --divider-color : #BDBDBD; /* border */
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+
 }
 
 textarea {
@@ -11,6 +26,16 @@ textarea {
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+}
+
+footer {
+  color: var(--secondary-text-color); 
+  background-color: var(--primary-text-color);
+  position:fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;  
+  padding: 10px;   
 }
 
 .jumbotron {
@@ -45,6 +70,7 @@ textarea {
 .past {
   background-color: #d3d3d3;
   color: white;
+  
 }
 
 .present {
@@ -57,42 +83,36 @@ textarea {
   color: white;
 }
 
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-.text-centre{
-  text-align: center;
-  padding :0px;
-  padding-left: 0px;
-
+.center{
+  text-align: center;  
+  padding-left: 15px;
+  padding-top:15px;
 }
 
 .border {
   border-width:2px !important;
 }
 
-.btn{
-  /* font-size: 2.5rem; */
-  font-weight: bolder;       
-  /* height:50px; */
-  /* border-radius: 200px; */
-  /* border : 2px solid var(--light-primary-color);     */
+.btn{  
+  font-weight: bolder; 
+  color: white;      
   cursor: pointer;   
-  /* color: var(--secondary-text-color);  */
-  /* background-color: var(--divider-color); */
+  font-size: 1.1rem;
 }
 
 .btn:hover {
   /* border: 3px solid var(--dark-primary-color); */
-  color : red
+  color : #ff6961
+}
+
+.lead{
+  color : #ff6961
+}
+.time{
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.container{
+  padding-bottom: 25rem;
 }
